@@ -10,6 +10,8 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.Locale;
+
 import static com.shutdoor.affinity.Affinity.MODID;
 
 @Mod.EventBusSubscriber(modid = MODID)
@@ -30,14 +32,14 @@ public class EnchantAffinity extends Enchantment {
 
     @Override
     protected boolean checkCompatibility(Enchantment p_44690_) {
-        return super.checkCompatibility(p_44690_) && !(p_44690_.getFullname(0).toString().toLowerCase().contains("affinity"));
+        return super.checkCompatibility(p_44690_) && !(p_44690_.getRegistryName().toString().toLowerCase().contains("affinity"));
     }
 
     @SubscribeEvent
     public static void breakSpeed(PlayerEvent.BreakSpeed e) {
-        Player p = e.getEntity();
+        Player p = e.getPlayer();
 
-        if(EnchantmentHelper.getEnchantmentLevel(EnchantmentReg.AFFINITY.get(), p) > 0){
+        if(EnchantmentHelper.getEnchantmentLevel(Affinity.affinity, p) > 0){
 
 
         if(!(p.isOnGround()) && !(p.isUnderWater())){
