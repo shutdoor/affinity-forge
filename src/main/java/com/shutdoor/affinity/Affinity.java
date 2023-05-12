@@ -7,15 +7,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ObjectHolder;
-import org.slf4j.Logger;
 import static com.shutdoor.affinity.Affinity.MODID;
 
 
 @Mod(MODID)
 public class Affinity
 {
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
     public static final String MODID = "affinity";
 
     @ObjectHolder(MODID +":"+ MODID)

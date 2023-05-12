@@ -1,6 +1,5 @@
 buildscript {
     repositories {
-        // These repositories are only for Gradle plugins, put any other repositories in the repository block further below
         maven { url = 'https://maven.minecraftforge.net' }
         mavenCentral()
     }
@@ -14,7 +13,7 @@ plugins {
 }
 apply plugin: 'net.minecraftforge.gradle'
 
-version = '1.18.2-0.0.2'
+version = '1.18.2-0.0.3'
 group = 'com.shutdoor.affinity' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'affinity'
 

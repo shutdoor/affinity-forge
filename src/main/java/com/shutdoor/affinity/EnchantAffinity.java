@@ -17,14 +17,14 @@ import static com.shutdoor.affinity.Affinity.MODID;
 @Mod.EventBusSubscriber(modid = MODID)
 public class EnchantAffinity extends Enchantment {
     public EnchantAffinity() {
-        super(Rarity.UNCOMMON, EnchantmentCategory.ARMOR_HEAD, new EquipmentSlot[]{
+        super(Rarity.RARE, EnchantmentCategory.ARMOR_HEAD, new EquipmentSlot[]{
                 EquipmentSlot.HEAD
         });
     }
 
     @Override
     public int getMinCost(int level) {
-        return 15;
+        return 30;
     }
 
     @Override
