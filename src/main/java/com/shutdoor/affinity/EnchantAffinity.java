@@ -5,7 +5,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -15,14 +14,14 @@ import static com.shutdoor.affinity.Affinity.MODID;
 @Mod.EventBusSubscriber(modid = MODID)
 public class EnchantAffinity extends Enchantment {
     public EnchantAffinity() {
-        super(Rarity.UNCOMMON, EnchantmentCategory.ARMOR_HEAD, new EquipmentSlot[]{
+        super(Rarity.RARE, EnchantmentCategory.ARMOR_HEAD, new EquipmentSlot[]{
                 EquipmentSlot.HEAD
         });
     }
 
     @Override
     public int getMinCost(int level) {
-        return 15;
+        return 20;
     }
 
     @Override
