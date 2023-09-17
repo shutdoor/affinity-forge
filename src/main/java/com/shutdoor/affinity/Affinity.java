@@ -8,8 +8,7 @@ import static com.shutdoor.affinity.Affinity.MODID;
 
 
 @Mod(MODID)
-public class Affinity
-{
+public class Affinity {
     public static final String MODID = "affinity";
 
     public Affinity()
@@ -18,8 +17,4 @@ public class Affinity
         EnchantmentReg.ENCHANTMENT.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
     }
-
-
-
-
 }

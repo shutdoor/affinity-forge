@@ -39,17 +39,17 @@ public class EnchantAffinity extends Enchantment {
         if(EnchantmentHelper.getEnchantmentLevel(EnchantmentReg.AFFINITY.get(), p) > 0){
 
 
-        if(!(p.isOnGround()) && !(p.isUnderWater())){
-            float oldSpeed = e.getOriginalSpeed();
+            if(!(p.onGround()) && !(p.isUnderWater())){
+                float oldSpeed = e.getOriginalSpeed();
 
-            e.setNewSpeed(oldSpeed * 5);
-        }
+                e.setNewSpeed(oldSpeed * 5);
+            }
 
-        if(p.isUnderWater()){
-            float oldSpeed = e.getOriginalSpeed();
+            if(p.isUnderWater()){
+                float oldSpeed = e.getOriginalSpeed();
 
-            e.setNewSpeed(oldSpeed * 5);
-        }
+                e.setNewSpeed(oldSpeed * 5);
+            }
         }
     }
 }
